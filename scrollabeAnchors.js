@@ -13,10 +13,10 @@ function updateTransform(element, translateY) {
 centeredText1.addEventListener("wheel", (event) => {
   if (event.deltaY > 0) {
     // Scrolling down
-    translateY1 += 30; // Adjust the scroll speed as needed
+    translateY1 += 40; // Adjust the scroll speed as needed
   } else {
     // Scrolling up
-    translateY1 -= 30;
+    translateY1 -= 40;
   }
 
   // Ensure the text stays within the container bounds
@@ -34,10 +34,10 @@ centeredText1.addEventListener("wheel", (event) => {
 centeredText2.addEventListener("wheel", (event) => {
   if (event.deltaY > 0) {
     // Scrolling down
-    translateY2 += 30; // Adjust the scroll speed as needed
+    translateY2 += 40; // Adjust the scroll speed as needed
   } else {
     // Scrolling up
-    translateY2 -= 30;
+    translateY2 -= 40;
   }
 
   // Ensure the text stays within the container bounds

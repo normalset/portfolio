@@ -1,3 +1,7 @@
+body {
+  background-color: black;
+}
+
 .container {
   display : grid ;
   grid-template-columns : 10fr 1fr 1fr 10fr ;
@@ -43,4 +47,49 @@
 a{
   text-decoration: none;
   /* color: white; */
+}
+
+/* font */
+p,h1,h2,h3,a{
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+/* iframe clock container */
+
+
+.iframe-container {
+  position: relative;
+  padding-bottom: 122.25%;
+  /* This aspect ratio ensures the iframe scales properly */
+  height: 0;
+  overflow: hidden;
+  border: none ;
+  /* Hides the scrollbar */
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  overflow: none;
+  /* Removes the border around the iframe */
+}
+.clockwrapper{
+  overflow: hidden ;
+}
+
+
+/* add some space from the borders in h1 h2 and p tags */
+h1,h2,p {
+  padding:10px ;
+}
+
+/* flowfield */
+
+canvas{
+  align-self: center;
+  align-items: center;
 }

@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
+  <!-- nanum + myeongjio -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
   <title>Document</title>
 </head>
 <body>
@@ -12,8 +18,8 @@
     <h1>Carlo Tarabbo</h1>
     <!-- container tag con image e decorazioni ai lati(?) -->
     <h2 id="about-me">About me</h2>
-    <p>My name is Carlo Tarabbo, and I am currently a computer science student at the University of Pisa. Throughout my
-    academic and personal endeavors, I have found myself straddling the worlds of science, maths, technology and art, where
+    <p>My name is Carlo Tarabbo, and I am currently a computer science student at the University of Pisa.<br>Throughout my
+    academic and personal endeavors, I have found myself straddling the worlds of science, technology and art, where
     the realms of maths, ones and zeros converge with the strokes of a paintbrush.</p>
     <h2 id="patterns">a love for geometric patterns</h2>
     <p>At the core of my interests lies a deep appreciation for geometric patterns and mathematics. The precision and order in
@@ -28,15 +34,25 @@
     pattern-making and matching properties, and honing my skills in web design and front-end development are all on my list
     of aspirations.</p>
     <h2 id="code">coding projects</h2>
+    <div class="clockwrapper">
+      <div class="iframe-container">
+        <iframe src="https://modulartextwatch-normalset.netlify.app/"></iframe>
+      </div>
+    </div>
+    <h3>flowfield</h3>
+    <div class="flowfieldWrapper" style="background-color: black; margin:0 ; padding : 0; overflow: hidden;">
+      <canvas id="canvas1" style="width: 40vw ; height: 40vw;"></canvas>
+    </div>
+    <!--todo htmlcss interactive wave manimulator controls under it -->
+
     <!--todo clock -->
     <!--todo python fractal generator -->
-    <!--todo htmlcss interactive wave manimulator -->
     <h2 id="contacts">contacts</h2>
     <!--todo contacts -->
     </div>
 
 
-    <div class="column middle" style="background-color :grey ">
+    <div class="column middle" style="background-color :grey; background-image: url(./media/wave.png)">
       <div class="centered-text" id="centeredText1" >
         <a class="anchorBarLink" href="#about-me">about me</a>
         <a class="anchorBarLink" href="#patterns">a love for geometric patterns</a>
@@ -47,7 +63,7 @@
       </div>
     </div>
 
-    <div class="column middle" style="background-color :grey ; transform: rotateZ(180deg);">
+    <div class="column middle" style="background-color :grey ; transform: rotateZ(180deg); background-image: url(./media/wave.png);">
       <div class="centered-text" id="centeredText2" >
         <a class="anchorBarLink" href="">shop</a>
         <a class="anchorBarLink" href="">commissions</a>
@@ -59,7 +75,7 @@
 
 
     <div class="column right" style="background-color : blue ">
-    <h1>normalset</h1>
+    <h1 style="font-size: 6vw; text-align: right; background-image: url(./media/wavesWhite.png);">normalset.</h1>
     <h2 id="canvas">finding a canvas in both worlds</h2>
     <h2 id="passion">a passion for turning ideas into reality</h2>
     <h2 id="portfolio">digital portfolio</h2>
@@ -69,6 +85,7 @@
   </div>
 
 
-  <script src="script.js"></script>
+  <script src="scrollabeAnchors.js"></script>
+  <script src="./flowfield/flowfield.js"></script>
 </body>
 </html>
