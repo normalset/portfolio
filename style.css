@@ -60,7 +60,7 @@ p,h1,h2,h3,a{
 
 .iframe-container {
   position: relative;
-  padding-bottom: 122.25%;
+  padding-bottom: 100%;
   /* This aspect ratio ensures the iframe scales properly */
   height: 0;
   overflow: hidden;
@@ -80,6 +80,11 @@ iframe {
 }
 .clockwrapper{
   overflow: hidden ;
+}
+
+#clock{
+  width: 44vw;
+  height: 44vw;
 }
 
 
@@ -108,4 +113,17 @@ canvas{
   object-fit: contain;
   border: 1px solid #ddd;
   margin: 5px;
+}
+
+.lostfaith{
+  box-shadow: 0px 0px 40px #249da3;
+  width: 45vw;
+  /* padding: 1vw; */
+  scale: 90%;
+}
+
+.temperance{
+  box-shadow: 0px 0px 40px #912120;
+    width: 45vw;
+    scale: 90%;
 }
