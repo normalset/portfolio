@@ -1,0 +1,14 @@
+.main_gallery {
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction:row;
+  align-items: center;
+}
+
+.photo {
+  width: 18vw;
+  height: 18vw;
+  margin: 1vw;
+  background-size: cover;
+  background-position: top left;
+}
