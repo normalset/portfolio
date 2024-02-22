@@ -103,7 +103,6 @@ class Effect {
     //aggiungo una debugmode che si attiva premendo d
     this.debug = false;
     window.addEventListener('keydown', (e) => {
-      console.log(e)
       if (e.key === 'd') this.debug = !this.debug //se true set it to false if false set it to true
     })
 
@@ -111,8 +110,6 @@ class Effect {
     this.init(); //pusha una nuova particella i quando genero una nuova particella
 
     window.addEventListener('resize', (e) => {
-      console.log();
-      console.log(e.target.innerWidth, e.target.innerHeight);
       this.resize(e.target.innerWidth, e.target.innerHeight);
       this.particles.forEach(particle => { particle.update() }) //?
 
@@ -128,7 +125,7 @@ class Effect {
         let angle = (Math.cos(x * this.zoom) + Math.sin(y * this.zoom)) * this.curve;
         this.flowField.push(angle); //tengo conto che sto salvando i flowfield data come una lista e non una matrice
       }
-      console.log(this.flowField);
+
     }
 
     //create particles
@@ -170,7 +167,7 @@ class Effect {
     this.canvas.height = height;
     this.width = this.canvas.width;
     this.height = this.canvas.height;
-    console.log(this.width, this.height);
+
   }
 }
 
@@ -178,7 +175,6 @@ const effect = new Effect(canvas);
 
 
 effect.render(ctx);
-console.log(effect)
 
 function animate() {
   //questo genera un loop, timestamps, si aggiusta al framerate del pc per creare l'animazione automaticamente
