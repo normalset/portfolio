@@ -2,6 +2,11 @@ body {
   background-color: black;
 }
 
+/* Coloumns text container */
+.col-text-container{
+  border: 1px solid white;
+}
+
 .container {
   display : grid ;
   grid-template-columns : 10fr 1fr 1fr 10fr ;
@@ -11,8 +16,8 @@ body {
 
 .column {
   flex : 1 ;
-  padding : 20 px ;
-  border : 1 px solid red ;
+  /* padding : 20 px ; */
+  padding: 0.08vw;
 }
 
 /** MIDDLE COL **/

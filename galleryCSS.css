@@ -1,14 +1,42 @@
-.main_gallery {
+.gallery {
   display: flex;
   flex-wrap:wrap;
   flex-direction:row;
+  justify-content: center;
   align-items: center;
 }
 
 .photo {
-  width: 18vw;
-  height: 18vw;
-  margin: 1vw;
+  width: 17vw;
+  height: 17vw;
+  margin: 2vw;
   background-size: cover;
   background-position: top left;
+
+  transition: width 0.5s ease , height 0.5s ease;
+
+  
+  overflow:hidden;
+  margin: 2vw;
+}
+
+.clicked_photo{
+  width: 40vw; 
+  height: 40vw;  
+}
+
+.image_button{
+  border: 0.5px solid white;
+  background-color: transparent;
+  align-content: center;
+
+  width: 30vw;
+  height: 6vw;
+
+  text-align: center;
+  font-size: 4vw;
+  color:white;
+  font-family: "Major Mono Display", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
