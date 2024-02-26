@@ -69,10 +69,13 @@ a {
 
 
 .iframe-container {
+  height: 1vw;
+  width: 40vw;
+  
+
   position: relative;
   padding-bottom: 100%;
   /* This aspect ratio ensures the iframe scales properly */
-  height: 0;
   overflow: hidden;
   border: none;
   /* Hides the scrollbar */
@@ -90,13 +93,14 @@ iframe {
 }
 
 .clockwrapper {
+  height: 35vw;
   overflow: hidden;
 }
 
-#clock {
+/* #clock {
   width: 44vw;
   height: 44vw;
-}
+} */
 
 
 /* add some space from the borders in h1 h2 and p tags */
@@ -139,8 +143,4 @@ canvas {
   box-shadow: 0px 0px 40px #912120;
   width: 45vw;
   scale: 90%;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 7aacfbb54b4f9946228e4730e2db01d6cdccb52b

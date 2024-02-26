@@ -52,7 +52,7 @@ function add_all_photos(gallery , imageLinks){
   });
 }
 
-function create_button(gallery , button_text, imageLinks){
+function create_button_bw(gallery , button_text, imageLinks){
   const button = document.createElement('button');
   button.classList.add('image_button');
   button.classList.add('bw_button');
@@ -86,7 +86,7 @@ function create_button(gallery , button_text, imageLinks){
       add_first_2_photos(gallery, imageLinks)
       //add button
       setTimeout(() => {
-        gallery.appendChild(create_button(gallery, "V", imageLinks));
+        gallery.appendChild(create_button_bw(gallery, "V", imageLinks));
       }, 2 * 100 + 10);
 
     } else {
@@ -98,8 +98,62 @@ function create_button(gallery , button_text, imageLinks){
       add_all_photos(gallery, imageLinks)
       //add button after delay
       setTimeout(() => {
-        gallery.appendChild(create_button(gallery, "Δ", imageLinks));
+        gallery.appendChild(create_button_bw(gallery, "Δ", imageLinks));
       }, imageLinks.length * 100+10);
+    }
+  })
+
+  return button
+}
+
+function create_button_color(gallery, button_text, imageLinks) {
+  const button = document.createElement('button');
+  button.classList.add('image_button');
+  button.classList.add('bw_button');
+  button.innerHTML = button_text;
+
+  //add event listener to scroll to header up
+  button.addEventListener('click', function () {
+    if (gallery.classList.contains("collapsed")) {
+      const heading = document.getElementById('color');
+      heading.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+
+  // add event listener to scroll to header down
+  button.addEventListener('click', function () {
+    if (!gallery.classList.contains("collapsed")) {
+      const heading = document.getElementById('commissions');
+      heading.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+
+
+  //event listener to collapse
+  button.addEventListener("click", function () {
+    if (gallery.classList.contains("collapsed")) {
+      //remove collapsed
+      gallery.classList.remove("collapsed")
+      //clear div
+      gallery.innerHTML = ""
+      //add back le due immagini
+      add_first_2_photos(gallery, imageLinks)
+      //add button
+      setTimeout(() => {
+        gallery.appendChild(create_button_color(gallery, "V", imageLinks));
+      }, 2 * 100 + 10);
+
+    } else {
+      //add collapse
+      gallery.classList.add("collapsed")
+      //remove the 2 images added and the button 
+      gallery.innerHTML = ""
+      // add all the images back
+      add_all_photos(gallery, imageLinks)
+      //add button after delay
+      setTimeout(() => {
+        gallery.appendChild(create_button_color(gallery, "Δ", imageLinks));
+      }, imageLinks.length * 100 + 10);
     }
   })
 
@@ -128,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //add button at the end 
   setTimeout(() => {
-    gallery.appendChild(create_button(gallery, "V", imageLinks));
+    gallery.appendChild(create_button_bw(gallery, "V", imageLinks));
   }, 2 * 100+ 10);
 });
 
@@ -147,18 +201,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const gallery = document.querySelector('.color_gallery');
 
-  imageLinks.forEach((link, index) => {
-    const photoDiv = document.createElement('div');
-    photoDiv.classList.add('photo');
+  add_first_2_photos(gallery, imageLinks)
 
-    photoDiv.style.backgroundImage = `url('${link}')`;
-    photoDiv.addEventListener("click", () => {
-      if (photoDiv.classList.contains("clicked_photo")) {
-        photoDiv.classList.remove("clicked_photo");
-      } else {
-        photoDiv.classList.add("clicked_photo");
-      }
-    })
-    gallery.appendChild(photoDiv);
-  });
+  //add button at the end 
+  setTimeout(() => {
+    gallery.appendChild(create_button_color(gallery, "V", imageLinks));
+  }, 2 * 100 + 10);
 });
