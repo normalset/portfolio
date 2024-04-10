@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <!-- nanum + myeongjio -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="column left" >
+    <h1 style="font-size: 2.5vw; margin: 1vw ; background-image: url(./media/2.png);">.carlo.tarabbo =
+      [] </h1>
+    <!-- container tag con image e decorazioni ai lati(?) -->
+<<<<<<< HEAD
+    <h2 id="about-me" style="background-image: url(./media/aaa.png);">About me</h2>
+    <p>My name is Carlo Tarabbo, and I'm currently a computer science student at the University of Pisa.<br>Throughout my
+=======
+    <div class="col-text-container">
+      <h2 id="about-me" style="background-image: url(./media/aaa.png);">About me</h2>
+    <p>My name is Carlo Tarabbo, and I am currently a computer science student at the University of Pisa.<br>Throughout my
+>>>>>>> 153c383eee3428ad7bdf32461ca3365e3f810714
+    academic and personal endeavors, I have found myself straddling the worlds of science, technology and art, where
+    the realms of maths, ones and zeros converge with the strokes of a paintbrush.</p>
+    </div>
+
+    <div class="col-text-container">
+      <h2 id="patterns" style="background-image: url(./media/fractal1.png);">a love for geometric patterns</h2>
+    <p>At the core of my interests lies a deep appreciation for geometric patterns and mathematics. The precision and order in
+    geometric patterns resonate with my scientific and research-oriented side, where I love to delve into the intricacies of
+    structured designs. Simultaneously, the freedom and fluidity of art, where nothing is constrained by rigid boundaries,
+    allow my creative side to flourish. Whether it's within a structured algorithm or a burst of artistic inspiration,
+    geometric patterns play a central role in my journey.</p>
+    </div>
+    <div class="col-text-container">
+      <h2 id="past-present" style="background-image: url(./media/download.png);">current focus and looking forward</h2>
+    <p>Currently, my main interests revolve around web design and a touch of game design. The dynamic nature of the web and the
+    immersive experience of gaming intrigue me, and I'm excited to explore these fields further. Looking ahead, I have a
+    strong desire to expand my horizons. Learning a new language, delving into the intricate world of cryptography for its
+    pattern-making and matching properties, and honing my skills in web design and front-end development are all on my list
+    of aspirations.</p>
+    </div>
+    
+    <h2 id="code">.coding&#95projects( )</h2>
+    <div class="clockwrapper">
+      <div class="iframe-container">
+        <iframe id="clock" src="https://modulartextwatch-normalset.netlify.app/"></iframe>
+      </div>
+    </div>
+    <h3 style="background-image: url(./media/download\ \(15\).png);">.flowfield( )</h3>
+    <div class="flowfieldWrapper" style="background-color: black; margin:0 ; padding : 0; overflow: hidden;">
+      <canvas id="canvas1" style="width: 40vw ; height: 40vw;"></canvas>
+    </div>
+    <!--todo htmlcss interactive wave manimulator controls under it -->
+
+    <!--todo python fractal generator -->
+    <!--todo contacts -->
+        <h2 id="contacts" style="background-image: url(./media/fractal1.png)">.contacts( )</h2>
+
+
+    </div>
+
+
+    <div class="column middle" style="background-image: url(./media/wave.png)">
+      <div class="centered-text" id="centeredText1" >
+        <a class="anchorBarLink" href="#about-me">about me</a>
+        <a class="anchorBarLink" href="#patterns"">a love for geometric patterns</a>
+        <a class="anchorBarLink" href="#past-present">current focus and looking forward</a>
+        <a class="anchorBarLink" href="#code">code</a>
+        <a class="anchorBarLink" href="#contacts">contacts</a>
+
+      </div>
+    </div>
+
+    <div class="column middle" style="transform: rotateZ(180deg); background-image: url(./media/wave.png);">
+      <div class="centered-text" id="centeredText2" >
+        <a class="anchorBarLink" href="">shop</a>
+        <a class="anchorBarLink" href="">commissions</a>
+        <a class="anchorBarLink" href="">digital portfolio</a>
+        <a class="anchorBarLink" href="">a passion for turning ideas into reality</a>
+        <a class="anchorBarLink" href="">a canvas in both worlds </a>
+      </div>
+    </div>
+
+
+    <div class="column right">
+    <h1 style="font-size: 6vw; text-align: right; background-image: url(./media/wavesWhite.png); margin: 1vw;">normalset.</h1>
+    <h2 id="canvas">finding a canvas in both worlds</h2>
+    <h2 id="passion">a passion for turning ideas into reality</h2>
+    <h2 id="portfolio">digital portfolio</h2>
+    <section class="gallery" id="photo-gallery">
+     
+    </section>
+    <h2 id="commissions">commissions</h2>
+      <div>
+        <img class="lostfaith" src="./media/drawings/lostfaith.png">
+        <img class="temperance" src="./media/drawings/temperance.png">
+      </div>
+
+      <h2 id="shop">shop</h2>
+      <!-- <div class="clockwrapper">
+        <div class="iframe-container">
+          <iframe src="https://normalset.creator-spring.com/" style="padding: 1vw"></iframe>
+        </div>
+      </div> -->
+    </div> <!--colright-->
+    <br>
+  </div> <!--close container-->
+  
+
+  <script src="scrollabeAnchors.js"></script>
+  <script src="./flowfield/flowfield.js"></script>
+  <script src="./shufflePhotos.js"></script>
+</body>
+</html>
