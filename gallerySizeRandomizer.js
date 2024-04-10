@@ -163,6 +163,7 @@ function create_button_color(gallery, button_text, imageLinks) {
 // black and white photos
 document.addEventListener("DOMContentLoaded", function () {
   const imageLinks = [
+    "./media/drawings/1.jpg" , 
     "./media/drawings/2.jpg" , 
     "./media/drawings/3.jpg", 
     "./media/drawings/4.jpg", 
